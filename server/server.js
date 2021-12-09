@@ -11,13 +11,23 @@ app.use(cors());
 
 app.get('/bible', (req, res) => {
   axios.get('https://devotionalium.com/api/v2')
-  .then(result => {
-    // console.log('this result', result.data)
-    res.send(result.data)
-  })
-  .catch(err => {
+    .then(result => {
+      // console.log('this result', result.data)
+      res.send(result.data)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+})
+
+app.get('/kanye', async (req, res) => {
+  try {
+    const kanyeQuote = await axios.get('https://api.kanye.rest')
+    // console.log(kanyeQuote.data)
+      res.send(kanyeQuote.data.quote)
+  } catch (err) {
     console.log(err)
-  })
+  }
 })
 
 app.listen(port, () => {

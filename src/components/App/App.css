@@ -9,11 +9,40 @@
   color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  /* justify-content: space-evenly; */
+}
+
+.quote img {
+  min-width: 200px;
+}
+
+button {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  font-family: Avenir, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  background: red;
+  text-shadow: 0 3px 1px rgba(122,17,8,.8);
+  box-shadow: 0 8px 0 rgb(146, 8, 0),
+    0 15px 20px rgba(238, 238, 238, 0.35);
+  transition: .4s all ease-in;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+button span { position: relative; }
+/* fix for IE 11 (and IE8+, although the earlier versions are harder to address) stupidly moving the inner button text on click */
+.pressed {
+  padding-top: 3px;
+  transition: translateY(4px), 1s;
+  box-shadow: 0 4px 0 rgb(183,0,0), 0 8px 6px rgba(0,0,0,.45);
+  /* transition: 1s; */
 }
