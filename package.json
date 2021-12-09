@@ -1,0 +1,32 @@
+{
+  "name": "jesuswalks",
+  "description": "The Kanye West vs The Holy Bible Gameshow",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "build": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeremiahBerndt/jesuswalks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeremiahBerndt/jesuswalks/issues"
+  },
+  "homepage": "https://github.com/JeremiahBerndt/jesuswalks#readme",
+  "dependencies": {
+    "@babel/preset-react": "^7.16.0",
+    "axios": "^0.24.0",
+    "babel-loader": "^8.2.3",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
